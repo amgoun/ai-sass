@@ -2,26 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+@layer components {
+  .hover-menu {
+    @apply text-yellowish border-b-2 border-yellowish transition-all
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light-text {
+  @apply font-light  py-2 px-4 border border-whiter/20 rounded-md inline-flex text-sm
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.wraper {
+  @apply max-w-[578px]
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
